@@ -96,7 +96,7 @@ const PaymentPage = ({ params }) => {
             <div className='bg-gray-100 min-h-[80vh] pb-16'>
                 <div className='relative flex flex-col items-center'>
                     <div className='cover w-full md:h-[350px] h-auto bg-slate-600 overflow-hidden'>
-                        <img className='object-cover w-full md:h-[350] h-auto' src='https://dnm.nflximg.net/api/v6/2DuQlx0fM4wd1nzqm5BFBi6ILa8/AAAAQeMzPn8iTCFkrKB7adPZBsro3vogloFzL_2LC2qUcgdlICt_-GwmjyQP5Q4gPOvmEoMc6-tGXbfs5BKcSOb10txNA8Hz2nHymjJwiMrDerrNkHfQt_anm_MvnSQRZs1fbbNfutOl4jaqZqegNirdA4TQ.jpg?r=54c' alt="" />
+                        <img className='object-cover w-full md:h-[350] h-auto' src={currentuser.coverpic} alt="" />
                     </div>
                     <div className='absolute bottom-[-55px] '>
                         <img className='rounded-full' width={110} src={currentuser.profilepic} alt="" />
@@ -118,7 +118,7 @@ const PaymentPage = ({ params }) => {
                             <ul className='max-h-[280px] overflow-auto'>
                                 {payments.length == 0 && <li>&nbsp; No payments yet</li>}
                                 {payments.map((p, i) => {
-                                    return <li key={i} className='mb-2 flex gap-2'><div className="text-2xl xs:text-4xl">☕</div><div><span className='font-bold'>{p.name}</span> bought you a coffee of <span className='font-bold'>₹{p.amount}</span> with a message "{p.message}"</div></li>
+                                    return <li key={i} className='mb-2 flex gap-2'><div className="text-2xl xs:text-4xl">☕</div><div><span className='font-bold'>{p.name}</span> bought you a coffee of <span className='font-bold'>₹{p.amount}</span> with a message &quot;{p.message}&quot;</div></li>
                                 })}
                             </ul>
                         </div>
