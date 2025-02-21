@@ -18,7 +18,7 @@ const Navbar = () => {
 
             {session && <div className='flex'>
                 <div className='relative'>
-                    <button onClick={() => setshowdropdown(!showdropdown)} onBlur={() => { setTimeout(() => { setshowdropdown(false) }, 300); }} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className=" bg-white hover:bg-gray-100 transition duration-300 ease-in-out font-bold rounded-lg px-5 py-2.5 text-center inline-flex items-center" type="button">Welcome <span className='hidden md:inline'>{session.user.email}</span><svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <button onClick={() => setshowdropdown(!showdropdown)} onBlur={() => { setTimeout(() => { setshowdropdown(false) }, 300); }} id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" className=" bg-white hover:bg-gray-100 transition duration-300 ease-in-out font-bold rounded-lg px-5 py-2.5 text-center inline-flex items-center" type="button">Welcome&nbsp;<span className='hidden md:inline'>{session.user.email}</span><svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4" />
                     </svg>
                     </button>
